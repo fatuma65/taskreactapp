@@ -1,0 +1,38 @@
+.home-section {
+  background-color: #202223;
+  height: 100vh;
+}
+.section1 {
+  display: flex;
+  color: #fff;
+  justify-content: space-around;
+  align-items: center;
+  width: 100%;
+  position: relative;
+}
+
+.para1 h1 {
+  font-size: 65px;
+  margin-left: 100px;
+  color: #d8562c;
+}
+.para1 h2 {
+  margin-left: 100px;
+  margin-top: -25px;
+  color: orange;
+}
+.para1 {
+  width: 50%;
+  max-width: 100%;
+}
+.para1 p {
+  font-size: 18px;
+  margin-left: 100px;
+  margin-top: -25px;
+}
+.section1 img {
+  margin-top: 40px;
+  width: 50%;
+  max-width: 100%;
+  height: auto;
+}
