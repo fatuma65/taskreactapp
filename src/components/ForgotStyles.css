@@ -1,0 +1,57 @@
+.forgot-section {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    /* justify-content: center; */
+    width: 70%;  
+    margin-top: 190px;
+    /* margin-bottom: -100px; */
+    margin: auto;
+}
+.forgot {
+    height: 100vh;
+}
+.inline {
+    margin-top: 100px;
+}
+.forgot-section a {
+    text-decoration: none;
+}
+.forgot-section a:hover {
+    text-decoration: underline;
+}
+.forgot-section h2{
+    font-weight: normal;
+    font-size: 18px;
+    margin-top: -10px;
+}
+.forgot-section form {
+    display: flex;
+    flex-direction: column;
+    width: 500px;
+
+}
+
+.forgot-section input {
+    padding: 15px;
+    margin: 10px;
+    border-radius: 10px;
+}
+.forgot-section button {
+    padding: 15px;
+    background-color: #000;
+    color: #fff;
+    font-size: 16px;
+    margin: 10px;
+    border-radius: 10px;
+
+}
+.forgot-section button:hover {
+    background-color: #343638;
+}
+.forgot-section label {
+    font-size: 18px;
+    margin: 10px;
+
+
+}
