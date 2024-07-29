@@ -9,14 +9,14 @@ const Navbar = () => {
   const navigate = useNavigate();
   const signOut = () => {
     const sign = auth.signOut();
-    console.log(sign);
+    // console.log(sign);
     navigate("/");
     return sign;
   };
   return (
     <>
       <div className="header">
-        <h1>Todo</h1>
+        <h1>DoItNow</h1>
         <ul>
           {isLoggedIn ? (
             <>
@@ -25,7 +25,7 @@ const Navbar = () => {
                 <Link to="/">Home</Link>
               </li>
               <li>
-                <Link to="/tasks">Tasks</Link>
+                <Link to="/overview">Dashboard</Link>
               </li>
               <li onClick={signOut}>
                 {" "}
@@ -38,17 +38,20 @@ const Navbar = () => {
                 {" "}
                 <Link to="/">Home</Link>
               </li>
+              <li>Contact</li>
               {/* <li>
                 <Link to="/tasks">Tasks</Link>
               </li> */}
-              <li>
+              <li className="button">
+                {" "}
+                <Link to="/login">Sign In</Link>
+              </li>
+              <li className="button">
                 {" "}
                 <Link to="/register">Register</Link>
               </li>
-              {/* <li onClick={signOut}>
-                {" "}
-                <Link to="/logout">Logout</Link>
-              </li> */}
+              {/* <button><Link to={'/login'}>Sign In</Link></button>
+              <button><Link to={'/register'}>Register</Link></button> */}
             </>
           )}
         </ul>

@@ -11,7 +11,7 @@ import {  signInWithEmailAndPassword,
 } from 'firebase/auth'
 // import { signInWithEmail } from "../firebase/auth";
 const Login = () => {
-  const { isLoggedIn, currentUser } = useAuth();
+  const { isLoggedIn, currentUser,handleUsername, initializeUser } = useAuth();
 
   const [formData, setFormData] = useState({
     email: "",
@@ -40,8 +40,10 @@ const Login = () => {
         // const user = userCreditial.user()
         // console.log(user)
         console.log("User signed in successfully");
-        localStorage.setItem("username", formData.email);
+        console.log(currentUser)
+        localStorage.setItem("email", formData.email);
         localStorage.setItem("password", formData.password);
+        initializeUser(formData.email)
         alert(
           `Welcome ${formData.email}, you have been logged in successfully`
         );
@@ -49,7 +51,7 @@ const Login = () => {
           email: "",
           password: "",
         });
-        navigate("/tasks"); // Navigate to tasks page or any other route
+        navigate("/overview"); // Navigate to tasks page or any other route
       }
       else {
         console.log('aYou are already logged in, please sign out')

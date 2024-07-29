@@ -1,0 +1,14 @@
+.inside-1 a {
+    text-decoration: none;
+    color: #fff;
+}
+.inside-1 button:hover {
+    background-color: rgb(114, 169, 227);
+}
+#select {
+    display: none;
+    padding: 10px;
+}
+.check {
+    display: flex;
+}
