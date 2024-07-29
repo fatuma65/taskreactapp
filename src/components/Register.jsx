@@ -6,6 +6,7 @@ import { Link } from "react-router-dom";
 import { auth } from "../firebase/firebase";
 // import "boxicons";
 import welcome from "../assests/welcome1.jpg";
+import useAuth from "../contexts/context";
 import { createUserWithEmailAndPassword } from "firebase/auth";
 // import { signInWithEmail } from "../firebase/auth";
 const Register = () => {
@@ -13,11 +14,10 @@ const Register = () => {
     first_name: "",
     last_name: "",
     email: "",
-    // username: "",
+    username: "",
     password: "",
   });
   const [showPassword, setShowPassword] = useState(false);
-
   const handlePasswordVisibility = () => {
     setShowPassword(!showPassword);
   };
@@ -29,12 +29,14 @@ const Register = () => {
 
   const navigate = useNavigate();
 
+
   const handleSubmit = async (e) => {
     e.preventDefault();
     try {
       const userCrediatials = await createUserWithEmailAndPassword(auth, formData.email, formData.password)
       const user = userCrediatials.user
       console.log(user)
+      localStorage.setItem('name',formData.username)
       alert('You have created an account successfully')
     } catch (error) {
       console.log(error.message);
@@ -81,6 +83,17 @@ const Register = () => {
                   name="email"
                   required
                   value={formData.email}
+                  onChange={handleChange}
+                />
+              </fieldset>
+              <fieldset>
+                <label htmlFor="username">Username</label>
+                <input
+                  type="text"
+                  id="username"
+                  name="username"
+                  required
+                  value={formData.username}
                   onChange={handleChange}
                 />
               </fieldset>
