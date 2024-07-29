@@ -88,21 +88,7 @@ const TaskDashboard = () => {
               {selectedComponent === "reminder" && <Tasks />}
             </div>
           </div>
-          <div className="details">
-            <h2>Task Details</h2>
-            {task.map((tas) => (
-              <div key={tas.id}>
-                <div
-                  onClick={handleSelectedTaskid(tas.id)}
-                  style={{ cursor: "pointer" }}>
-                  <h3>{tas.title}</h3>
-                  <p>{tas.description}</p>
-                </div>
-                <h3>{tas.title}</h3>
-                <p>{tas.description}</p>
-              </div>
-            ))}
-          </div>
+               </div>
         </div>
       </div> */}
 
